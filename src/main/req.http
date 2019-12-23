@@ -1,0 +1,16 @@
+
+###                    Echo Request
+GET http://localhost:8080/echo/hello there HTTP/1.1
+
+###                    Storage Requests
+### GET request
+GET http://localhost:8080/storage HTTP/1.1
+
+### PUT request
+PUT http://localhost:8080/storage/1 HTTP/1.1
+Content-Type: text/plain
+
+Jay
+
+###  DELETE request
+DELETE http://localhost:8080/storage/1 HTTP/1.1
