@@ -1,6 +1,6 @@
-val Http4sVersion = "0.20.8"
-val CirceVersion = "0.11.1"
-val Specs2Version = "4.1.0"
+val Http4sVersion  = "0.20.8"
+val CirceVersion   = "0.11.1"
+val Specs2Version  = "4.1.0"
 val LogbackVersion = "1.2.3"
 
 lazy val root = (project in file("."))
@@ -10,14 +10,15 @@ lazy val root = (project in file("."))
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.12.8",
     libraryDependencies ++= Seq(
-      "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
-      "org.http4s"      %% "http4s-blaze-client" % Http4sVersion,
-      "org.http4s"      %% "http4s-circe"        % Http4sVersion,
-      "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
-      "io.circe"        %% "circe-generic"       % CirceVersion,
-      "org.specs2"      %% "specs2-core"         % Specs2Version % "test",
-      "ch.qos.logback"  %  "logback-classic"     % LogbackVersion,
-      "dev.zio"         %% "zio"                 % "1.0.0-RC17"
+      "org.http4s"     %% "http4s-blaze-server" % Http4sVersion,
+      "org.http4s"     %% "http4s-blaze-client" % Http4sVersion,
+      "org.http4s"     %% "http4s-circe"        % Http4sVersion,
+      "org.http4s"     %% "http4s-dsl"          % Http4sVersion,
+      "io.circe"       %% "circe-generic"       % CirceVersion,
+      "org.specs2"     %% "specs2-core"         % Specs2Version % "test",
+      "org.scalatest"  % "scalatest_2.12"       % "3.1.0" % "test",
+      "org.scalacheck" %% "scalacheck"          % "1.14.1" % "test",
+      "ch.qos.logback" % "logback-classic"      % LogbackVersion
     ),
     addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.10.3"),
     addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.0")
@@ -25,10 +26,11 @@ lazy val root = (project in file("."))
 
 scalacOptions ++= Seq(
   "-deprecation",
-  "-encoding", "UTF-8",
+  "-encoding",
+  "UTF-8",
   "-language:higherKinds",
   "-language:postfixOps",
   "-feature",
   "-Ypartial-unification",
-  "-Xfatal-warnings",
+  "-Xfatal-warnings"
 )
