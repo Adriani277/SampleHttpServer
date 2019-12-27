@@ -10,15 +10,18 @@ lazy val root = (project in file("."))
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.12.8",
     libraryDependencies ++= Seq(
-      "org.http4s"     %% "http4s-blaze-server" % Http4sVersion,
-      "org.http4s"     %% "http4s-blaze-client" % Http4sVersion,
-      "org.http4s"     %% "http4s-circe"        % Http4sVersion,
-      "org.http4s"     %% "http4s-dsl"          % Http4sVersion,
-      "io.circe"       %% "circe-generic"       % CirceVersion,
-      "org.specs2"     %% "specs2-core"         % Specs2Version % "test",
-      "org.scalatest"  % "scalatest_2.12"       % "3.1.0" % "test",
-      "org.scalacheck" %% "scalacheck"          % "1.14.1" % "test",
-      "ch.qos.logback" % "logback-classic"      % LogbackVersion
+      "org.http4s"     %% "http4s-blaze-server"    % Http4sVersion,
+      "org.http4s"     %% "http4s-blaze-client"    % Http4sVersion,
+      "org.http4s"     %% "http4s-circe"           % Http4sVersion,
+      "org.http4s"     %% "http4s-dsl"             % Http4sVersion,
+      "io.circe"       %% "circe-generic"          % CirceVersion,
+      "org.specs2"     %% "specs2-core"            % Specs2Version % "test",
+      "org.scalatest"  % "scalatest_2.12"          % "3.1.0" % "test",
+      "org.scalacheck" %% "scalacheck"             % "1.14.1" % "test",
+      "ch.qos.logback" % "logback-classic"         % LogbackVersion,
+      "org.typelevel"  %% "cats-laws"              % "2.0.0",
+      "org.typelevel"  %% "cats-mtl-core"          % "0.7.0",
+      "org.typelevel"  %% "cats-testkit-scalatest" % "1.0.0-RC1" % Test
     ),
     addCompilerPlugin("org.typelevel" %% "kind-projector"     % "0.10.3"),
     addCompilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.0")
